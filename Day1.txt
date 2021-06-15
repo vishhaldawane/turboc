@@ -1,0 +1,330 @@
+
+
+
+		C programming
+
+				- With Vishhal
+
+
+
+
+
+	Day1	12.30 to 4.30 as per indian timing
+		9 to 1 as per south african timing - half day
+
+					eg. spoken 
+	C	Programming 		Language					  			|
+				--------------------------
+				|	|	|	|
+				listen speak   read    write
+				|	|	|	|
+			   concepts  concepts programs programs
+
+
+	program = series of instructions
+
+
+1st generation - machine language - 0 and 1 0101010101011 binary
+2nd generation - assembly language - 001 can be a word
+				     110 can be another word
+
+3rd generation - C programming - set of functions 
+
+4th generation - Java programming (created in C and C++)
+
+
+
+	C programming - 
+
+
+	you write a .c file 
+		    |
+		your source code
+
+	you write a .cpp file for C++ code - "Effective C++"
+
+	for java you write .java file 
+
+	The C Compiler
+
+	Computer - 
+
+	H/w/cpu	->	Intel	 IBM	Hp	Apple	
+	|		|	  |	|	|
+	OS		Windows  AIX	UX	Macintosh
+	|		|	  |	|	|
+	|		|
+	your c		greet.c (SOURCE CODE - written by you)
+	program		|	
+	|		|
+	compile		greet.obj (compiler -- OBJECT CODE)
+	your program	|
+			|
+	linking 	greet.exe (your final output file )
+	your program	|	ie executable code 
+	with system	|
+	libraries	now you can run this .exe file anywhere
+			on any other windows os
+			LIMITATION IS : YOU "CANNOT" RUN IT ON IBM,
+			HP OR APPLE 
+
+	LETS SEE AN EXAMPLE
+	OF THIS OPERATIONG SYSTEM FILES
+
+
+
+	ALL THESE 100S OF FILES (.EXE FILES)
+
+	NOTHING BUT SOURCE CODE WRITEN BY SOMEONE
+
+	.C		.CPP		ONLY DIFFERENCE IN WRITING THE
+	|		|		CODE
+	|		|
+	.OBJ		.OBJ
+	|		|
+	.EXE		.EXE
+
+
+
+	greet.c			greet.cpp
+	|			|
+	#include <stdio.h>	#include <iostream>	
+	int main()		int main()
+	{			{
+	  printf("hello");		cout<<"hello"; 
+	  return 0;			return 0;
+	}			}
+
+
+	
+	Data types in C
+
+Size of any data type would vary as per the compiler and OS
+
+	Compiler	Windows		Linux	Apple
+	|		|		|	|
+	|		int		int
+	|		
+	Turboc		2		2
+	Visual C	4		4
+
+	int rollNumber; <--- what would be max number hold by this???
+
+	some time your c program can be transported to a smaller
+	device ( mobile phone, washing machine, some smaller electronic
+		devices where size does matter)
+
+	int rollNumberOfANursery = 120; // why to have 4 bytes here
+
+	int rollNumberofUniversity = 37256; // can't have 2 bytes here
+
+
+
+	knowledge  --> applied --> wisdom
+
+	
+
+		Primitive Data Types 
+			|
+	--------------------------------------------
+		|		|		|
+	   Integral	   Floating	  Character
+		|		|		|
+		int   2		float	 4	char 1 bytes
+		long  4		double   8	ASCII - 255 letters
+
+
+	int rollNumber;
+	long planetoryDistance;
+
+	float rateOfInterest = 3.5;
+	double molecularDistance = 1000.45;
+
+	1 bit = binary digit - electronic pulse ON / OFF  1 / 0
+
+	8 bits = 1 byte
+
+	1 byte = collection of 8 bits
+
+
+
+	1 bit			0
+				1
+
+	2 bits			0 0	0
+				0 1	1
+				1 0	2
+				1 1	3
+
+	3 bits			0 0 0	0
+				0 0 1	1
+				0 1 0	2
+				0 1 1   3 
+				1 0 0 	4
+				1 0 1   5	
+				1 1 0   6
+				1 1 1 	7
+
+	4 bits			16
+
+	5			32
+	6			64
+	7			128
+	8			256
+	9			512 -- remember ( hard disk 512 bytes
+					means one sector)
+
+	10			1024 - ie your 1 KB
+
+	11			2048 ( some IBM machines have this 					archietecture)
+
+	12			4096
+	13			8192
+	14			16,384
+	15			32,768
+	16
+	..
+	..
+	32
+
+
+
+
+0	0	0	0		0	0	0	0
+|	|	|	|		|	|	|	|
+2^7	2^6	2^5	2^4		2^3	2^2	2^1	2^0
+|	|	|	|		|	|	|	|
+1	1	1	1		1	1	1	1
+128	64	32	16		8	4	2	1
+
+	
+		255 - is complete dial of 1 byte architecture
+
+		but how about negative numbers
+
+		negative side	   | ---> positive side
+-127 -126 -125 ....-5 -4 -3 -2 -1  0 1 2 3 4 5 ...... 128
+ <------------------------ 255 --------------------------->
+
+
+32,767				   0			32,768
+ <----------------dial of an int (2 byte) ---------------------->
+
+
+
+
+
+32,767				   0			32,768
+ <----------------dial of an long ( 4 ) ---------------------->
+
+
+
+
+
+
+
+
+
+
+
+	
+	0000 0000		0
+	0000 0001		1	
+	0000 0010		2
+
+	
+		int rollNumber;
+
+
+	bits		magnitude of a number
+	1		2
+	2		4
+
+
+
+	0000 0000  0000 0000		2 bytes / 16 bits
+	<----- int--------->
+
+
+	0000 0000  0000 0000	0000 0000  0000 0000 4 bytes/32 bits
+	<-------------------- long------------------>
+
+
+
+	<-----------integral part------->  <-decimal->
+	0000 0000  0000 0000	0000 0000  0000 0000  4 bytes/32 bits
+	<--------------------float ------------------>
+	<------number 3 is here -------->  <--.86 is here-->
+
+		float interestRate = 3.86;
+		float strikeRate = 186.60;
+
+<----------------------------------------integer portion --------------------->	 <-- 10 bits-->							
+0000 0000  0000 0000	0000 0000  0000 0000    0000 0000  0000 0000	0000 00  00  0000 0000
+<--------------------------------------------64 bits -------------------------------------->
+
+		double molecular distance = 21.0000000004;
+
+
+
+
+
+
+
+
+
+	notepad	turboc	eclipse	unix	codeblock      linux
+	|	|	  |	 |	 |		|
+	cc	horrible easy   $ cc	your favourite  gcc/g++
+
+	datatype.c
+	----------------
+	#include <stdio.h>
+	int main()
+	{
+	
+		char gender='F'; // make sure of single quote here
+		int rollNumber=124; // Thando's roll number
+		float salary=5000; // USD
+		double interestRate = 5.49; // bank interest rate
+
+		printf("Gender   is : %c",gender);
+		printf("Roll     is : %d",rollNumber);
+		printf("Sal      is : %f",salary);
+		printf("Interest is : %lf",interestRate);
+		return 0;
+	}
+
+		
+
+
+
+
+
+		windows os(CPU)  GNU compiler (codeblock)
+		|
+		int is 4 bytes
+
+		windows os(CPU) - turboc compiler
+		|
+		int is 2 bytes
+
+
+		linux os (CPU)	- turboc compiler
+		|
+		int is 4 bytes 
+
+
+
+
+
+
+
+
+
+
+	Day2
+
+	Day3
+
+	Day4
