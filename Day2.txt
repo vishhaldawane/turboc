@@ -1,0 +1,380 @@
+
+
+
+
+	data type
+		|
+	---------------------------------------
+	|		|		|
+	int	%d	float	%f	char - %c
+	long	%ld	double  %lf
+
+
+	double is also known as long float ie 8 bytes 
+
+	
+	char firstName[10]="John";
+	char middleName[10]="Peter";
+	char lastName[10]="Dsouza";
+
+
+	this is an array of characters
+
+		char gender='F';  <-- this is not an array
+			v/s
+		char firstName[10]="John"; <-- this is an array
+
+important line -> "ARRAY NAME" IS SAME AS "ITS FIRST MEMORY ADDRESS"
+
+	this will occupy 10 bytes in the memory
+
+	  0  1  2  3  4  5  6  7  8  9 <-----------we work with index
+	---------------------------------------
+	| J| o |h  |n  |\0 |    |   |   |  |  |
+	---------------------------------------
+	100 101 102 103 104 105 106 107 108 109 <---pointer/computer works with addresses
+	<------------------10 bytes ----------->
+
+	printf("%s",firstName);  %s means collection of letters
+	printf("%c",firstName[2]);  %c means only single letter
+
+
+	%s means print the string until \0
+
+	IN ABOVE CASE 100 IS THE MEMORY ADDRESS OF THE ARRAY
+	IT IS ALSO THE ADDRESS OF THE LETTER J
+
+
+	format specifiers 
+	
+	%c for character
+	
+clsrcr();
+getch();
+printf("\nYour short name is  : %c.%c.%s",firstName[0],middleName[0],lastName);
+				|   |  |        |          |		|
+				|   ------------------------		|
+				|      |        |			|
+				| 	--------|------------------------
+				+---------------+
+
+	cout<<"my gender is "<<gender<<" and my name is "<<firstName;
+	|
+	cout is not a function
+	rather it is an object
+
+	<< is the function ( internally known as operator function)
+
+
+In india there is one village known as paris
+In France also there is Paris - popular
+
+	so here India is the name space for Paris village
+
+	and France is the namespace for Paris city - the capital
+
+
+	namespace India
+	{
+		int paris=100;
+
+	}
+
+	namespace France
+	{
+		int paris=200;
+		int delhi=400;	
+		int london=300;
+	}
+
+	using namespace France;
+	
+	int main()
+	{
+		cout<<delhi; //scope resolution operator
+
+		cout<<India::paris;
+		cout<<paris;
+	}
+
+	---> number of characters 
+     0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22	23 24 25 26 27 28 29 30
+--------------------------------------------------------------------------------------
+  0  M a t a m e l a   C y  r   i  l    R  a  m  a  p  h  o  s  a  \0 
+--------------------------------------------------------------------------------------
+  1
+--------------------------------------------------------------------------------------
+  2
+--------------------------------------------------------------------------------------
+  3
+--------------------------------------------------------------------------------------
+
+
+	memory address never known to the developer/human
+
+	but u can use & symbol to fetch the memory address
+
+		
+
+
+year2000
+
+	What is an array???
+
+
+	It is a group of variables
+
+	of "similar" data type
+
+	stored in "consecutive" memory locations
+
+	referred by a "common name"
+
+
+
+	name of the array and its first address are synonymous
+
+
+	int score=189; // this is just a score of a single player
+
+	int cricketers[11]={185,44,56,77,88}
+
+	<-------------------------11 numbers ------------------>
+	 index						last index
+	  |						    |
+	  0    1     2    3     4    5    6    7   8      9     10
+	--------------------------------------------------------
+	| 185| 44  | 56  | 77  |    |    |    |    |    |    |    |
+	--------------------------------------------------------
+	34220|34224|34228|34232| ..  .. ..
+	34221
+	34222
+	34223
+	
+	cout<<"4th player score is : "<<cricketers[9];
+
+	there is a formula for this  as below
+
+	* ( base location address + (size of type * index) )
+		34220		  + (  4         * 9  )   )
+		34220		  + (  36  )   )
+	*		34238
+	|		|
+	valueOf	address 34232
+
+
+
+	* means valueOf operator
+
+	& means addressOf operator
+
+	*& valueOfAddressOf 
+
+
+
+
+
+
+
+		int num=190;
+
+
+
+		name	-->	num
+
+		value	--->	190
+
+		address	--->	we dont know
+
+
+
+
+
+		only c and c++ has this power 
+
+
+
+		you can access any variable's value
+
+		via its name	-	cout<<num
+					cout<<presidentName;
+					cout<<presidentName[15];
+
+		or 
+	
+		via its address		
+					cout<<*&num
+					cout<<*&presidentName;
+					cout<<*&presidentName[15];
+
+
+
+
+
+
+
+
+
+	
+	   run once   if its true	each time it would run
+		|	    |		|
+	for(initializer ; condition; evaluator )
+	{
+		loop body - if the condition is true
+				only then the body runs
+	}
+	
+		A	B	D
+	for(int i=0;	i<11;	i++  )   
+	{
+		C
+	}
+
+
+	unary operator -> 
+
+		i++  same as 	 i=i+1
+
+		++i   same as  i=i+1
+
+		both are same ====> to increment
+
+		but difference in fetch order
+
+		assume i is 10;
+
+
+		k=i++;  postfix increment
+		k=++i;	prefix increment
+		
+
+
+
+	my concern is --> you innovate your own example
+				as per your own idea
+				by referring current code
+
+
+	multidimentional array
+
+		int scoreCard[11]={185,44,56,77}-----> columns
+
+
+
+   talk /	type	assignments / challenges	
+	|	|		|
+	ear	eyes		skin/gut feelings
+
+		int scoreCard[2][11]=
+		{
+			{185,44,56,77},
+			{78,43,36,88,46},
+		}
+
+nlp we deal with sequence of this
+
+
+
+for us to understand the below diagram is very easy
+	  0    1     2    3     4    5    6    7     8    9   10
+	-----------------------------------------------------------
+  0	| 185| 44  | 56  | 77  |    |    |    |    |    |    |    |  
+	-----------------------------------------------------------
+  1	| 78 | 43  | 36  | 88  |  46|    |    |    |    |    |    |
+	-----------------------------------------------------------
+	
+
+below diagram is the computer memory
+	<-------------------------------0----------------------->  <---------------------1---------------------------------->
+	  0    1     2    3     4    5    6    7     8    9   10      0   1     2    3     4    5    6    7     8    9   10      
+	----------------------------------------------------------------------------------------------------------------------
+  	| 185| 44  | 56  | 77  |    |    |    |    |    |    |    | 78| 43  | 36  | 88  | 46   |    |    |    |    |    |    |
+	-------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+int marks[4][8]=
+    {
+        {89,99,100,87,86,76}, // SEM-i  phy, chem, maths, eng1, eng2, eng3
+        {87,95,98,84,82,78}  // SEM-ii phy, chem, maths, eng1, eng2, eng3
+    };
+
+
+2018
+
+2019
+
+2020
+
+2021
+           0    1     2    3     4    5     6    7
+	--------------------------------------------
+  0	| 89| 99  | 100  | 87  | 86  | 76 |    |   |
+	--------------------------------------------
+  1	| 87 |95  | 98   | 84  | 82  | 78 |    |   |
+	--------------------------------------------
+  2	| 87 |95  | 98   | 84  | 82  | 78 |    |   |
+	--------------------------------------------
+  3	| 87 |95  | 98   | 84  | 82  | 78 |    |   |
+	--------------------------------------------
+	
+	unitTotal[4];
+
+	  0        1        2       3
+	---------------------------------
+	|  0	|  0	|   0	|   0	|
+	---------------------------------
+
+
+	
+-----------------------------------------
+
+
+	Sequential coding
+		cout
+		cout
+		cout
+
+	Selection coding
+		cout
+		cout
+		cout
+			if condition
+			switch condition
+
+	Iterative coding
+		cout
+		cout
+		cout
+	
+			for loop
+			while loop
+			do while loop
+
+
+
+
+	yes u r audible
+
+	m i audible????
+
+
+
+	do
+	{
+		code to be executed at least ONCE
+		regardless of the condition
+
+	} while(condition)
+
+		if the above while condition is true
+		then the loop body will repeat
+
+		if the condition failed, the it wont run the loop
+		body for the SECOND TIME
+
+
+
+
+
