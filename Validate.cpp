@@ -1,27 +1,25 @@
 #include <iostream>
 using namespace std;
-
 //generic solution
-
-void validateValues(int actualValue, int minValue, int maxValue, char s[], char e[])
-{
+void validateValues(int actualValue, int minValue, int maxValue, char successMsg[], char errMsg[])
+{       //23            1       &&   23     <=31
     if(actualValue >= minValue && actualValue <=maxValue) {
-        cout<<s;
+        cout<<successMsg;
     }
-    else {
-        cout<<e;
-    }
+    else {        cout<<errMsg;    }
 }
-int main() {
+int moon() {
+    int day, salary, street, year, month;
 
-    int day; int salary; int street;
-
-    cout<<"\nEnter day of month : ";
-    cin >> day; //1-31
+    cout<<"\nEnter day of month : ";    cin >> day; //1-31  23
     validateValues(day,1,31,"Valid Day","Invalid Day");//passing array as an argument
+    cout<<"\nEnter month : ";           cin >> month; //1-31
+    validateValues(month,1,12,"Valid Month","Invalid Month");//passing array as an argument
 
-    cout<<"\nEnter Salary : ";
-    cin >> salary; // 5000 25000
+    cout<<"\nEnter year : ";           cin >> year; //1-31
+    validateValues(year,1,9999,"Valid Year","Invalid Year");//passing array as an argument
+
+    cout<<"\nEnter Salary : ";          cin >> salary; // 5000 25000
 
     validateValues(salary,5000,25000,"Valid Salary","Invalid Salary");
 
