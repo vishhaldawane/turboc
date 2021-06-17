@@ -1,0 +1,274 @@
+	
+
+
+	Function is "the most important" aspect of "any programming"
+
+
+
+		the purpose of the function 
+
+		-is to do a SPECIFIC TASK
+
+		-it allows a modular approach 
+
+		-reusable
+
+
+		there are "four types" of functions 
+		in the whole programming world
+		C,C++, Java, Dotnet, python, C#, Angular, React....
+
+		1. function without arguments/parameters AND
+	           without any return value
+
+		returnTypeHere	functionName( arguments here )
+		{
+			code to do here
+		}
+
+	noReturnValue	  function without arguments
+		|		      |	
+		void  functionName1 ( | )
+		{
+
+		}
+		
+		void greet() <--- called route
+		{
+			int num;
+			cout<<"\nGood Morning Thando"<<endl;
+		}
+		int main() <--- calling route
+		{
+			greet(); // each round trip by main here
+			greet();
+			greet();
+		}
+
+		
+
+	Non executable lines
+	
+	1. single line comment is //
+
+	2. block comment is 
+		/*  code to 
+			be 
+			commented 
+		*/
+
+	
+		2. function with arguments/parameters BUT
+	           without any return value
+
+
+		void calculateSimpleInterest(int p, int n, float r)
+		{
+			float si = (p*n*r)/100;
+			cout<<"\nSimple interest is : "<<si<<endl;
+		}
+
+
+	The function body written above main - is global to main
+
+	The function body written below main - is local to main
+
+
+	A() { // function B and C are local to A
+	}
+	B() {  // function C is local and A is global
+	}
+	C() { // B and A are global to C
+	}
+	main() { // A B C are global to main & P Q R are local to main
+	}
+	P() { }
+	Q(){ }
+	R() { }
+	
+		
+	3. function with arguments/parameters And 
+	           ALSO with return value
+
+	return value			 parameter1 parameter2 parameter3
+		|			     |	       |	|
+		float  calculateAverage(int phy, int chem, int maths)
+		{
+		  float avg = (phy +chem+maths) / 3;
+		  return avg;   // mandate to return a float value
+		}
+
+
+
+	float avg = (float) (10 + 20 + 30)  / 3; 
+			|	all are int here
+			|
+		explicit casting 
+		the data type of 10 20 30 and 3 is always int
+		but the processing would be of float type
+
+
+		int + int   will produce int
+		int + float will produce float
+		float + float will produce float
+		float + double will produce double
+
+		
+		4. function withOUT arguments/parameters BUT 
+	           with return value
+
+
+		double distanceBetweenEarthAndSun()
+		{
+					
+			double distance = 186000.519 * 480;
+			return distance;
+		}
+
+	
+
+	practical way of implementing functions in daily life
+	of coding
+
+
+
+		1. void clearMyScreen(void)
+
+		2. void clearMyScreen(int cols, int rows)
+
+		3. float calculateSquareRoot(float number)
+
+		4. char calculateTheGrade() --> A B C
+
+
+
+	Enter your age : 28  (1-120)		Russia -> 110
+
+	Enter your salary : 5000  (5000-25000)
+
+	Enter day of month : 1	( 1-31 and 29 if its Feb and Leap)
+	Enter month        : 1-12
+	Enter  year 	   : 1-9999
+
+	Enter pin 	   : 500010 ( pin format would vary as 
+					per the country / city )
+
+	Enter street no    : 1-50
+
+	Enter Building No  : 1-100
+	Enter house no	   : 1-1000
+		
+
+
+		MyPC/MyComputer
+		|
+	--------------------------
+	|			|
+	C:			D:
+	|			|
+	-----------		THANDO
+	|			|
+	program files x86	----------
+	|			|
+	CodeBlocks		Day3Project
+	|			|
+	MinGW			-------------------
+	|			|		|
+	include			StringTets.cpp	mycompany.h
+	|			|
+all the headers are	#include <string.h>
+here	|		#include "mycompany.h"
+	string.h
+	|
+ it has strlen declared there
+ strlen is NOT DEFINED THERE
+
+	days[0]
+
+ char days[7][10]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+   
+
+	 0  1  2  3  4  5   6  7 8 9   10
+	----------------------------------	
+ 0      |S |u |n |d |a |y |\0|  |  |  |  |
+	----------------------------------
+ 1	|M |o |n |d |a |y |\0|  |  |  |  |
+	----------------------------------
+ 2	|T |u |e |s |d |a |y |\0|  |  |  |
+	----------------------------------
+ 3	|W |e |d |n |e |s |d |a |y |\0|  |
+	----------------------------------
+ 4	|T |h |u |r |s |d |a |y |\0|  |  |
+	----------------------------------
+ 5	|F |r |i |d |a |y |\0|  |  |  |  |
+	----------------------------------
+ 6	|S |a |t |u |r |d |a |y |\0|  |  |
+	----------------------------------
+
+
+	Palindrome strings
+
+		Liril  - this is a soap brand
+		
+		
+		Malayalam
+
+		madam  
+
+		rats drown in wordstar
+
+		ratsdrow ni nword star
+
+
+			    
+	char anyString[20]="madam"
+
+
+		i	                        j
+		|	                        |
+		0	1	2	3	4
+		m	a	d	a	m
+
+
+
+	if i=0
+	if j=strlen(anyString)-1;	
+
+	i++
+	j--
+	   i=1  a
+	   j=3  e
+
+	i++
+	j--
+	   i=2  d
+	   j=2  d
+
+
+	Local and global functions
+
+	void foo() { // definition
+
+	}
+
+	int main() { // we dont need forward "declartion" for global one
+
+		void fun(); //forward "declaration" of the function
+
+		foo(); // callIt - invocation
+		fun(); //callIt -invocation
+	}
+
+	void fun() { // local function "defined" here
+
+	
+	}
+
+	Local and global variables
+
+	String manipulations
+
+
+
+
+
